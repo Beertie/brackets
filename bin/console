@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+// application.php
+
+require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/../src/Commands/WinnerCommand.php';
+
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+$application->add(new \Brackets\Commands\WinnerCommand());
+$application->run();
